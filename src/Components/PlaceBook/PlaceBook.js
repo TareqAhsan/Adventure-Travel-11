@@ -24,7 +24,7 @@ const PlaceBook = () => {
         setSingleData(result.data);
       }
     );
-  });
+  }, []);
 
   const onSubmit = (data) => {
     console.log(data);
