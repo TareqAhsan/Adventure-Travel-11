@@ -8,14 +8,19 @@ const Packages = () => {
     <div className="bg-light p-5">
       <div className="container  pt-4 text-center">
         <h1 className="text-primary my-3 py-3 display-4">Our Packages</h1>
-        {
-          !packages?.length ? <Spinner animation="border"  variant="primary"></Spinner>:
+        {!packages?.length ? (
+          <Spinner
+            animation="border"
+            variant="primary"
+            style={{ height: "3rem", width: "3rem" }}
+          ></Spinner>
+        ) : (
           <Row xs={1} md={2} lg={3} className="g-4">
-          {packages?.map((pack) => (
-            <Package key={pack._id} pack={pack}></Package>
-          ))}
-        </Row>
-        }
+            {packages?.map((pack) => (
+              <Package key={pack._id} pack={pack}></Package>
+            ))}
+          </Row>
+        )}
       </div>
     </div>
   );

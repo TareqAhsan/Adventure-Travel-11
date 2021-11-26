@@ -7,12 +7,12 @@ const Package = ({ pack }) => {
   return (
     <Zoom>
       <Card
-        className="h-100 rounded rounded-3 shadow"
+        className="h-100  rounded-3 shadow"
         style={{ borderRadius: "15px" }}
       >
         <Card.Img
           style={{ height: "250px" }}
-          className="rounded"
+          className="rounded-3"
           variant="top"
           src={img}
         />
